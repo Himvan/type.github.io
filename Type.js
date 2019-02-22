@@ -5,7 +5,7 @@ if(typeof(arr)=="undefined")
       console.log("undefined")
       
    }
-else if(typeof(arr)=="null")
+else if(arr==null)
    {
        console.log("null");
    }
@@ -15,12 +15,18 @@ else if(arr.constructor==Array)
      if(arr[0].constructor==Object)
      {
         console.log("Array of Object");
-        console.log(arr);
+        var b=arr.map((x) => {
+            return x;
+        });
+        console.log(b);
      }
      else 
      {
          console.log("array");
-         console.log(arr);
+         var c=arr.map((x)=> {
+             return x;
+         });
+         console.log(c);
      }
  }
  else if(arr.constructor==Number)
@@ -51,11 +57,12 @@ else {
 
 
 var d;
-var c = [{"key": 2}];
+var g=null;
+var v = [{"key": 2},{"key":15},{"key":20},{"key":35}];
 var e=123
 check_datatype(d);
-check_datatype(c);
+check_datatype(g);
+check_datatype(v);
 check_datatype(e);
 check_datatype("Himvan");
 check_datatype([1,2,3,4]);
-
